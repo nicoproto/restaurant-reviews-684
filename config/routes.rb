@@ -9,5 +9,9 @@ Rails.application.routes.draw do
     member do
       get :chef
     end
+
+    resources :reviews, only: [ :new, :create ]
   end
+
+  resources :reviews, only: [ :destroy ]
 end
